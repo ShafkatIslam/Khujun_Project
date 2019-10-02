@@ -1,0 +1,41 @@
+{% extends 'Khujun/base_visitor.html' %}
+{% block title %}Register{% endblock %}
+{% block register_active %}active{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-6">
+        <br>
+            <div class="panel panel-default">
+                <div class="form-control">
+                <br>
+                    <h3 style="text-align: center;color: blue">রেজিস্ট্রেশন</h3>
+                   <br>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'Khujun/form_template.html' %}
+                        {% include 'Khujun/teacher_reg_template.html' %}
+                        <br>
+                        <div class="form-group">
+                            <div class="col-sm-offset-2 col-sm-10">
+                                <button type="submit" class="btn btn-success">সাবমিট</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer" style="text-align: center; margin-bottom: 40px">
+                    Already have an account? <a href="{% url 'Khujun:login_user' %}">Click here</a> to log in.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
