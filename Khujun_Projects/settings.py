@@ -137,4 +137,8 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+AUTH_PROFILE_MODULE = "Khujun.TeacherProfile"
+AUTH_PROFILES_MODULE = "Khujun.GuardianProfile"
+AUTH_IMAGE_MODULE = "Khujun.TeacherImage"
+
 django_heroku.settings(locals())

@@ -1,11 +1,16 @@
 from django.contrib.auth import authenticate, login
 from django.contrib.auth import logout
+from django.core.files.storage import FileSystemStorage
 from django.http import JsonResponse
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
 from django.db.models import Q
-from .forms import AlbumForm, SongForm, UserForm, TeacherRegistrationForm , GuardianRegistrationForm
-from .models import Album, Song
+from .forms import AlbumForm, SongForm, UserForm, TeacherRegistrationForm , GuardianRegistrationForm, TeacherProfileForm, GuardianProfileForm
+from .models import TeacherRegistration,GuardianRegistration
+from .models import Album, Song, TeacherProfile, GuardianProfile
+from django import forms
+from django.contrib.auth.models import User
+from django.contrib.auth.decorators import login_required
 
 AUDIO_FILE_TYPES = ['wav', 'mp3', 'ogg']
 IMAGE_FILE_TYPES = ['png', 'jpg', 'jpeg']
@@ -130,6 +135,9 @@ def index(request):
 def mainreg(request):
     return render(request, 'Khujun/main_register.html')
 
+def mainlogin(request):
+    return render(request, 'Khujun/main_login.html')
+
 def logout_user(request):
     logout(request)
     form = UserForm(request.POST or None)
@@ -138,7 +146,7 @@ def logout_user(request):
     }
     return render(request, 'Khujun/login.html', context)
 
-
+#Teacher Login
 def login_user(request):
     if request.method == "POST":
         username = request.POST['username']
@@ -147,15 +155,39 @@ def login_user(request):
         if user:
             if user.is_active:
                 login(request, user)
-                albums = Album.objects.filter(user=request.user)
-                return render(request, 'Khujun/index.html', {'albums': albums})
+                if TeacherRegistration.objects.filter(user=request.user,verify='Yes').exists():
+                    albums = Album.objects.filter(user=request.user)
+                    return render(request, 'Khujun/index.html', {'albums': albums})
+                else:
+                    return render(request, 'Khujun/login.html', {'error_message': 'আপনার একাউন্টটি যাচাই করা হয়নি '})
             else:
                 return render(request, 'Khujun/login.html', {'error_message': 'Your account has been disabled'})
         else:
             return render(request, 'Khujun/login.html', {'error_message': 'Invalid login'})
     return render(request, 'Khujun/login.html')
 
+#Guardian Login
+def login_users(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user:
+            if user.is_active:
+                login(request, user)
+                if GuardianRegistration.objects.filter(user=request.user,verify='Yes').exists():
+                    albums = Album.objects.filter(user=request.user)
+                    return render(request, 'Khujun/indexs.html', {'albums': albums})
+                else:
+                    return render(request, 'Khujun/logins.html', {'error_message': 'আপনার একাউন্টটি যাচাই করা হয়নি '})
+            else:
+                return render(request, 'Khujun/logins.html', {'error_message': 'Your account has been disabled'})
+        else:
+            return render(request, 'Khujun/logins.html', {'error_message': 'Invalid login'})
+    return render(request, 'Khujun/logins.html')
 
+
+#Teacher Registration
 def register(request):
     form = UserForm(request.POST or None)
     teacher_reg_form = TeacherRegistrationForm(request.POST or None)
@@ -168,6 +200,7 @@ def register(request):
         profile = teacher_reg_form.save(commit=False)
         profile.user = user
         profile.save()
+        TeacherProfile.objects.create(user=user)
         user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
@@ -180,6 +213,7 @@ def register(request):
     }
     return render(request, 'Khujun/register.html', context)
 
+#Guardian Registration
 def registers(request):
     form = UserForm(request.POST or None)
     guardian_reg_form = GuardianRegistrationForm(request.POST or None)
@@ -192,6 +226,7 @@ def registers(request):
         profile = guardian_reg_form.save(commit=False)
         profile.user = user
         profile.save()
+        GuardianProfile.objects.create(user=user)
         user = authenticate(username=username, password=password)
         if user is not None:
             if user.is_active:
@@ -203,6 +238,121 @@ def registers(request):
         "guardian_reg_form": guardian_reg_form,
     }
     return render(request, 'Khujun/registers.html', context)
+
+
+@login_required
+def teacher_profile_edit(request):
+        teacher_profile_edit = TeacherProfileForm(request.POST or None,instance=request.user.teacherprofile)
+        if teacher_profile_edit.is_valid():
+            profiles = TeacherProfile.objects.filter(user=request.user).get(),
+            teacher_profile_edit.save()
+            context = {
+                'profiles': profiles,
+                'teacher_profile_edit': teacher_profile_edit,
+            }
+            messages.info(request, 'আপনার প্রোফাইলটি আপডেট হয়েছে')
+            return render(request, 'Khujun/teacher_profile_edit.html',context)
+
+        profiles = TeacherProfile.objects.filter(user=request.user).get(),
+        teacher_profile_edit = TeacherProfileForm(instance=request.user.teacherprofile)
+
+        context = {
+            'profiles': profiles,
+            'teacher_profile_edit': teacher_profile_edit,
+        }
+        print(context)
+        return render(request, 'Khujun/teacher_profile_edit.html', context)
+
+@login_required
+def teacher_image_edit(request):
+    if request.method == 'POST':
+        teacher_profile_edit = TeacherProfileForm(instance=request.user.teacherprofile)
+        uploaded_file = request.FILES['images']
+        fs = FileSystemStorage()
+        names = fs.save(uploaded_file.name, uploaded_file)
+        url = fs.url(names)
+        print(uploaded_file.name)
+        print(uploaded_file.size)
+        profile = TeacherProfile.objects.filter(user=request.user).get()
+        profile.images = url
+        profile.save()
+
+        profiles = TeacherProfile.objects.filter(user=request.user).get()
+        context = {
+            'profiles':profiles,
+            'teacher_profile_edit': teacher_profile_edit,
+        }
+        print(context)
+        messages.info(request, 'আপনার প্রোফাইল ছবিটি আপডেট হয়েছে')
+        return render(request, 'Khujun/index.html',context)
+    else:
+        profiles = TeacherProfile.objects.filter(user=request.user).get(),
+        teacher_profile_edit = TeacherProfileForm(instance=request.user.teacherprofile)
+
+        context = {
+        'profiles': profiles,
+        'teacher_profile_edit': teacher_profile_edit,
+        }
+        return render(request, 'Khujun/teacher_profile_edit.html', context)
+
+
+@login_required
+def guardian_profile_edit(request):
+        guardian_profile_edit = GuardianProfileForm(request.POST or None,instance=request.user.guardianprofile)
+        if guardian_profile_edit.is_valid():
+            profiles = GuardianProfile.objects.filter(user=request.user).get(),
+            guardian_profile_edit.save()
+            context = {
+                'profiles': profiles,
+                'guardian_profile_edit': guardian_profile_edit,
+            }
+            messages.info(request, 'আপনার প্রোফাইলটি আপডেট হয়েছে')
+            return render(request, 'Khujun/guardian_profile_edit.html',context)
+
+        profiles = GuardianProfile.objects.filter(user=request.user).get(),
+        guardian_profile_edit = GuardianProfileForm(instance=request.user.guardianprofile)
+
+        context = {
+            'profiles': profiles,
+            'guardian_profile_edit': guardian_profile_edit,
+        }
+        print(context)
+        return render(request, 'Khujun/guardian_profile_edit.html', context)
+
+@login_required
+def guardian_image_edit(request):
+    if request.method == 'POST':
+        guardian_profile_edit = GuardianProfileForm(instance=request.user.guardianprofile)
+        uploaded_file = request.FILES['images']
+        fs = FileSystemStorage()
+        names = fs.save(uploaded_file.name, uploaded_file)
+        url = fs.url(names)
+        print(uploaded_file.name)
+        print(uploaded_file.size)
+        profile = GuardianProfile.objects.filter(user=request.user).get()
+        profile.images = url
+        profile.save()
+
+        profiles = GuardianProfile.objects.filter(user=request.user).get()
+        context = {
+            'profiles':profiles,
+            'guardian_profile_edit': guardian_profile_edit,
+        }
+        print(context)
+        messages.info(request, 'আপনার প্রোফাইল ছবিটি আপডেট হয়েছে')
+        return render(request, 'Khujun/indexs.html',context)
+    else:
+        profiles = GuardianProfile.objects.filter(user=request.user).get(),
+        guardian_profile_edit = GuardianProfileForm(instance=request.user.guardianprofile)
+
+        context = {
+        'profiles': profiles,
+        'guardian_profile_edit': guardian_profile_edit,
+        }
+        return render(request, 'Khujun/guardian_profile_edit.html', context)
+
+
+
 
 def songs(request, filter_by):
     if not request.user.is_authenticated():

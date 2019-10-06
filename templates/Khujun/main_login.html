@@ -1,0 +1,36 @@
+{% extends 'Khujun/base_visitor.html' %}
+{% block title %}Register{% endblock %}
+{% block register_active %}active{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-6">
+            <div class="panel panel-default">
+                <br>
+                <div class="form-control">
+                    <h3 style="text-align: center;color: blue">লগ-ইন</h3>
+                   <br>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-success btn-lg btn-block"><a class="btn-success" href="{% url 'Khujun:login_user' %}"> শিক্ষক লগ-ইন </a> </button>
+                            </div>
+                            <div class="col-auto" style="margin-top: 20px">
+                                <button type="button" class="btn btn-warning btn-lg btn-block"><a class="btn-warning" href="{% url 'Khujun:login_users' %}">অভিভাবক লগ-ইন</a> </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="panel-footer" style="text-align: center">
+                     Don't have an account? <a href="{% url 'Khujun:mainreg' %}">Click here</a> to register.
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+

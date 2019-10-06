@@ -38,7 +38,7 @@
         <div class="collapse navbar-collapse" id="topNavBar">
             <ul class="nav navbar-nav">
                 <li class="{% block albums_active %}{% endblock %}"><a href="{% url 'Khujun:index' %}"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>&nbsp; ড্যাশবোর্ড</a></li>
-                <li class="{% block profile_active %}{% endblock %}"><a href="{% url 'Khujun:teacher_profile_edit' %}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; ব্যবহারকারীর প্রোফাইল</a></li>
+                <li class="{% block profile_active %}{% endblock %}"><a href="{% url 'Khujun:guardian_profile_edit' %}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; ব্যবহারকারীর প্রোফাইল</a></li>
             </ul>
             <form class="navbar-form navbar-left" role="search" method="get" action="{% url 'Khujun:index' %}">
                 <div class="form-group">

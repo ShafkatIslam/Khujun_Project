@@ -21,9 +21,9 @@
                     {% endfor %}
                 </div>
                     {% if error_message %}
-                        <p class="text-danger text-center"><strong>{{ error_message }}</strong></p>
+                         <p class="text-danger text-center"><strong>{{ error_message }}</strong></p>
                     {% endif %}
-                    <form class="" role="form" action="{% url 'Khujun:login_user'%}" method="post" enctype="multipart/form-data">
+                    <form class="" role="form" action="{% url 'Khujun:login_users'%}" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         <div class="form-group">
                             <label class="container" for="id_username" style="color: green">

@@ -48,3 +48,37 @@ class GuardianRegistration(models.Model):
 
     def __str__(self):
         return self.user.username
+
+class TeacherProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=50, blank=True)
+    last_name = models.TextField(max_length=50, blank=True)
+    gender_name = models.CharField(max_length=200, blank=True)
+    blood_group = models.CharField(max_length=200, blank=True)
+    address = models.TextField(max_length=50, blank=True)
+    city = models.TextField(max_length=50, blank=True)
+    nid = models.TextField(max_length=17, blank=True)
+    school = models.TextField(max_length=50, blank=True)
+    college = models.TextField(max_length=50, blank=True)
+    university = models.TextField(max_length=50, blank=True)
+    subject = models.TextField(max_length=50, blank=True)
+    experience = models.TextField(max_length=1000, blank=True)
+    about = models.TextField(max_length=1000, blank=True)
+    images = models.TextField(max_length=1000, null=True, blank=True)
+
+    def __str__(self):
+        return self.user.username
+
+class GuardianProfile(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=50, blank=True)
+    last_name = models.TextField(max_length=50, blank=True)
+    gender_name = models.CharField(max_length=200, blank=True)
+    blood_group = models.CharField(max_length=200, blank=True)
+    address = models.TextField(max_length=50, blank=True)
+    city = models.TextField(max_length=50, blank=True)
+    nid = models.TextField(max_length=17, blank=True)
+    images = models.TextField(max_length=1000, null=True, blank=True)
+
+    def __str__(self):
+        return self.user.username
