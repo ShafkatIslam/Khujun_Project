@@ -1,0 +1,151 @@
+{% extends 'Khujun/bases.html' %}
+{% load static %}
+{% block body %}
+
+    <div class="container">
+
+    <div class="row justify-content-md-center">
+     <div class="col-sm-12 col-md-5">
+         <br>
+            <div class="card card-user">
+
+                     <div class="card-image">
+                         {% if profile.images %}
+                             <img class="avatar border-gray img-responsive" src="{{ MEDIA_URL}}{{ profile.images }}" alt="{{ profile.user }}" id="blah" src="#" >
+                         {% else %}
+                             <img class="avatar border-gray img-responsive" src="{% static 'Khujun/images/profile.jpg' %}" alt="..." id="blah" src="#">
+                         {% endif %}
+
+                     </div>
+
+            </div>
+        </div>
+        <div class="col-sm-12 col-md-7">
+        <br>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <br>
+                    <div class="form-group">
+                            <div class="col-sm-12">
+                                <a href={% url 'Khujun:teacherrequests' profile.id %}><button class="btn btn-warning" style="float: right">অনুরোধ পাঠান</button></a>
+                            </div>
+                        </div>
+                <br>
+                    <h3 style="text-align: center;color: blue">প্রোফাইল</h3>
+                   <br>
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data" style="margin: 20px">
+                        {% csrf_token %}
+
+                                        <div class="row">
+                                            <div class="col-md-6 pr-1">
+                                                <div class="form-group">
+                                                    <label style="font-size: 16px">নামের প্রথম অংশ</label>
+                                                    <input type="text" name="first_name" class="form-control" value="{{ profile.first_name }}" placeholder="প্রথম অংশ" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pl-1">
+                                                <div class="form-group">
+                                                    <label style="font-size: 16px">নামের শেষাংশ</label>
+                                                    <input type="text" class="form-control" name="last_name" value="{{ profile.last_name }}"  placeholder="শেষাংশ" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                           <div class="col-md-6 pr-1">
+                                                <div class="form-group">
+    												<label for="exampleFormControlSelect1" style="font-size: 16px">লিঙ্গ</label>
+    													<select class="form-control" name="gender_name" id="exampleFormControlSelect1" disabled>
+     														<option>{{ profile.gender_group }}</option>
+    													</select>
+  												</div>
+                                            </div>
+                                            <div class="col-md-6 pl-1">
+                                                <div class="form-group">
+                                                    <label for="exampleFormControlSelect1" style="font-size: 16px">রক্তের গ্রুপ </label>
+    													<select class="form-control" name="blood_group" id="exampleFormControlSelect1" disabled>
+     														<option>{{ profile.blood_group }}</option>
+    													</select>
+                                                </div>
+                                        	</div>
+                                    </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="font-size: 16px">ঠিকানা</label>
+                                                    <input type="text" class="form-control"name="Address" value="{{ profile.address }}" placeholder="বর্তমান ঠিকানা" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-6 pr-1">
+                                                <div class="form-group">
+                                                    <label style="font-size: 16px">শহর</label>
+                                                    <input type="text" class="form-control" name="city" value="{{ profile.city }}" placeholder="শহর" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6 pl-1">
+                                                <div class="form-group">
+                                                    <label style="font-size: 16px">জাতীয় পরিচয়-পত্র নম্বর/জন্ম-সনদ নম্বর</label>
+                                                    <input type="number" class="form-control" name="NID" value="{{ profile.nid }}" placeholder="জাতীয় পরিচয়-পত্র নম্বর/জন্ম-সনদ নম্বর" disabled>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="font-size: 16px">বিদ্যালয়</label>
+                                                    <input type="text" class="form-control" name="school_name" value="{{ profile.school }}" placeholder="বিদ্যালয়ের নাম" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="font-size: 16px">কলেজ</label>
+                                                    <input type="text" class="form-control" name="college_name" value="{{ profile.college }}" placeholder="কলেজের নাম" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-8 pr-1">
+                                                <div class="form-group">
+                                                    <label style="font-size: 16px">বিশ্ববিদ্যালয়</label>
+                                                    <input type="text" class="form-control" name="university_name" value="{{ profile.university }}" placeholder="বিশ্ববিদ্যালয়ের নাম" disabled>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4 pl-1">
+                                                <div class="form-group">
+                                                    <label style="font-size: 16px">পঠিত বিষয়</label>
+                                                    <input type="text" class="form-control" name="subject_name" value="{{ profile.subject }}" placeholder="বিষয়ের নাম" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="font-size: 16px">পূর্ব অভিজ্ঞতা </label>
+                                                    <textarea rows="4" cols="80" name="experience" class="form-control" value="{{ profile.experience }}" placeholder="আপনার পূর্ব অভিজ্ঞতা সম্পর্কে সংক্ষেপে লিখুন" disabled>{{ profile.experience }}</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="font-size: 16px">আত্ম-পরিচয় </label>
+                                                    <textarea rows="4" cols="80" name="About" class="form-control" value="{{ profile.about }}" placeholder="আপনার সম্পর্কে সংক্ষেপে লিখুন" disabled>{{ profile.about }}</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

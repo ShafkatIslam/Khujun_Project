@@ -1,6 +1,6 @@
 from django import forms
 from django.contrib.auth.models import User
-from Khujun.models import TeacherRegistration,GuardianRegistration,TeacherProfile,GuardianProfile
+from .models import TeacherRegistration,GuardianRegistration,TeacherProfile,GuardianProfile, TuitionInfo
 
 from .models import Album, Song
 
@@ -63,6 +63,51 @@ GENDER= [
     ('পুরুষ', 'পুরুষ'),
     ('মহিলা', 'মহিলা'),
     ]
+
+CLASSES= [
+    ('প্রথম','প্রথম'),
+    ('দ্বিতীয়','দ্বিতীয়'),
+    ('তৃতীয়','তৃতীয়'),
+    ('চতুর্থ','চতুর্থ'),
+    ('পঞ্চম','পঞ্চম'),
+    ('ষষ্ঠ','ষষ্ঠ'),
+    ('সপ্তম','সপ্তম'),
+    ('অষ্টম','অষ্টম'),
+    ('নবম','নবম'),
+    ('দশম','দশম'),
+    ('একাদশ','একাদশ'),
+    ('দ্বাদশ','দ্বাদশ'),
+]
+
+DAYS= [
+    ('১','১'),
+    ('২','২'),
+    ('৩','৩'),
+    ('৪','৪'),
+    ('৫','৫'),
+    ('৬','৬'),
+]
+
+PAYMENTS= [
+    ('১৫০০ ৳','১৫০০ ৳'),
+    ('২০০০ ৳','২০০০ ৳'),
+    ('২৫০০ ৳','২৫০০ ৳'),
+    ('৩০০০ ৳','৩০০০ ৳'),
+    ('৩৫০০ ৳','৩৫০০ ৳'),
+    ('৪০০০ ৳','৪০০০ ৳'),
+    ('৪৫০০ ৳','৪৫০০ ৳'),
+    ('৫০০০ ৳','৫০০০ ৳'),
+    ('৫৫০০ ৳','৫৫০০ ৳'),
+    ('৬০০০ ৳','৬০০০ ৳'),
+    ('৬৫০০ ৳','৬৫০০ ৳'),
+    ('৭০০০ ৳','৭০০০ ৳'),
+    ('৭৫০০ ৳','৭৫০০ ৳'),
+    ('৮০০০ ৳','৮০০০ ৳'),
+    ('৮৫০০ ৳','৮৫০০ ৳'),
+    ('৯০০০ ৳','৯০০০ ৳'),
+    ('৯৫০০ ৳','৯৫০০ ৳'),
+    ('১০০০০ ৳','১০০০০ ৳'),
+]
 
 class TeacherRegistrationForm(forms.ModelForm):
     ssc_board = forms.CharField(label='এস.এস.সি বোর্ড:', widget=forms.Select(choices=BOARDS,attrs={'class': 'form-control'}))
@@ -169,4 +214,17 @@ class GuardianProfileForm(forms.ModelForm):
         model = GuardianProfile
         fields = ('first_name', 'last_name', 'gender_group', 'blood_group', 'address', 'city', 'nid')
         exclude = {'user'}
+
+class TuitionInfoForm(forms.ModelForm):
+    classes = forms.CharField(label='শ্রেনী:', widget=forms.Select(choices=CLASSES,attrs={'class': 'form-control'}))
+    subject = forms.CharField(label='বিষয়:', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    day = forms.CharField(label='সাপ্তাহিক দিন:', widget=forms.Select(choices=DAYS, attrs={'class': 'form-control'}))
+    payment = forms.CharField(label='মাসিক বেতন:',widget=forms.Select(choices=PAYMENTS, attrs={'class': 'form-control'}))
+    institute_name = forms.CharField(label='বিদ্যালয়/কলেজের নাম:', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    address = forms.CharField(label='ঠিকানা:', widget=forms.TextInput(attrs={'class': 'form-control'}))
+
+    class Meta():
+        model = TuitionInfo
+        fields = ('classes', 'subject', 'day', 'payment', 'institute_name', 'address')
+
 

@@ -1,0 +1,107 @@
+{% extends 'Khujun/base.html' %}
+{% load static %}
+{% block body %}
+
+    <div class="container">
+
+    <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-8  col-md-offset-2">
+        <br>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                    <br>
+                    <div class="form-group">
+                            <div class="col-sm-12">
+                                {% if profile.teacher_confirm == 0 %}
+                                    <a href={% url 'Khujun:teacher_accept' profile.id %}><button class="btn btn-primary" style="float: right" >গ্রহণ করুন</button></a>
+                                    <a href={% url 'Khujun:teacher_reject' profile.id %}><button class="btn btn-primary" style="float: left" >বর্জন করুন</button></a>
+                                {% else %}
+                                    <a href={% url 'Khujun:teacher_accept' profile.id %}><button class="btn btn-primary" style="float: right" disabled>গ্রহণ করুন</button></a>
+                                    <a href={% url 'Khujun:teacher_reject' profile.id %}><button class="btn btn-primary" style="float: left" disabled>বর্জন করুন</button></a>
+                                {% endif %}
+
+                            </div>
+                        </div>
+                <br>
+                    <h3 style="text-align: center;color: blue">টিউশনের তথ্য</h3>
+                   <br>
+                    <div>
+                     {% for message in messages %}
+                         {% if profile.teacher_confirm == 1 %}
+                        <h4 class="text-center text-success">
+                            {{ message }}
+                        </h4>
+                         {% else %}
+                          <h4 class="text-center text-danger">
+                            {{ message }}
+                        </h4>
+                         {% endif %}
+                    {% endfor %}
+                </div>
+                <br>
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data" style="margin: 20px">
+                                        <div class="row">
+                                           <div class="col-md-6 pr-1">
+                                                <div class="form-group">
+    												<label for="exampleFormControlSelect1" style="font-size: 18px">শ্রেনী</label>
+    													<select class="form-control" name="classes" id="exampleFormControlSelect1" disabled>
+                                                            <option>{{ profile.classes }}</option>
+    													</select>
+  												</div>
+                                            </div>
+                                    </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="font-size: 18px">বিষয় </label>
+                                                    <textarea rows="4" cols="80" name="subject" class="form-control" value="" placeholder="বিষয়" disabled>{{ profile.subject }}</textarea>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="row">
+                                           <div class="col-md-6 pr-1">
+                                                <div class="form-group">
+    												<label for="exampleFormControlSelect1" style="font-size: 18px">সাপ্তাহিক দিন</label>
+    													<select class="form-control" name="day" id="exampleFormControlSelect1" disabled>
+                                                            <option>{{ profile.day }}</option>
+    													</select>
+  												</div>
+                                            </div>
+
+                                             <div class="col-md-6 pr-1">
+                                                <div class="form-group">
+    												<label for="exampleFormControlSelect1" style="font-size: 18px">বেতন</label>
+    													<select class="form-control" name="payment" id="exampleFormControlSelect1" disabled>
+                                                            <option>{{ profile.payment }}</option>
+    													</select>
+  												</div>
+                                            </div>
+                                    </div>
+
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="font-size: 18px">বিদ্যালয়/কলেজ</label>
+                                                    <input type="text" class="form-control" name="name" value="{{ profile.institute_name }}" placeholder="বিদ্যালয়/কলেজের নাম" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-md-12">
+                                                <div class="form-group">
+                                                    <label style="font-size: 18px">ঠিকানা</label>
+                                                    <input type="text" class="form-control" name="address" value="{{ profile.address }}" placeholder="ঠিকানা" disabled>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="clearfix"></div>
+                                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

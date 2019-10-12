@@ -1,0 +1,55 @@
+{% extends 'Khujun/base.html' %}
+{% load static %}
+{% block body %}
+<div class="container">
+                <br>
+                    <h3 style="text-align: center;color: blue">নোটিফিকেশন</h3>
+                   <br>
+                <div>
+                     {% for message in messages %}
+                        <h3 class="text-center text-success font-weight-bold">
+                            {{ message }}
+                        </h3>
+                    {% endfor %}
+                </div>
+
+
+
+<div class="content">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="container">
+                                <div class="list-group">
+                                    {% for profile in profiles %}
+                                    <a href={% url 'Khujun:details_tuition_info' profile.id %}  class="list-group-item" style="color: #1D62F0">
+                                        <h4 class="list-group-item-heading" style="font-size: 20px;color: #ff0f2f;font-family: arial">{{ profile.classes }}</h4>
+                                         <p class="list-group-item-text" style="font-size: 17px;color: #0c5460">{{ profile.payment }}</p>
+                                         <p class="list-group-item-text" style="font-size: 17px;color: #0c5460">{{ profile.institute_name }}</p>
+                                         {% if profile.teacher_confirm == 0 and profile.guardian_confirm == 0 %}
+                                            <p class="list-group-item-text" style="color: #00cd14; font-size: 20px">আপনার উক্ত টিউশনটির অনুরোধ এসেছে।</p>
+                                             <p class="list-group-item-text" style="color: #ad0aff; font-size: 18px">নিশ্চিত/বর্জন করতে ক্লিক করুন।</p>
+                                         {% elif profile.teacher_confirm == 1 and profile.guardian_confirm == 2 %}
+                                             <p class="list-group-item-text" style="color: #cd140a; font-size: 20px">সংশ্লিষ্ট অভিভাবক উক্ত টিউশনের অনুরোধ বাতিল করেছেন।</p>
+                                         {% elif profile.teacher_confirm == 1 and profile.guardian_confirm == 1 %}
+                                             <p class="list-group-item-text" style="color: #00cd14; font-size: 20px">আপনি এবং সংশ্লিষ্ট অভিভাবক উভয়ই ইতোমধ্যে টিউশনটি নিশ্চিত করেছেন।</p>
+                                         {% elif profile.teacher_confirm == 2 and profile.guardian_confirm == 0 %}
+                                             <p class="list-group-item-text" style="color: #cd140a; font-size: 20px">আপনি উক্ত টিউশনটি বর্জন করেছেন।</p>
+                                         {% else %}
+                                             <p class="list-group-item-text" style="color: #cdb720; font-size: 20px">সংশ্লিষ্ট অভিভাবক এখনও পর্যন্ত আপনার উক্ত টিউশনটি গ্রহণ/বর্জন করেননি।</p>
+                                        {% endif %}
+                                    </a>
+                                        <hr>
+                                    {% endfor %}
+                                </div>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+</div>
+
+
+{% endblock %}
+

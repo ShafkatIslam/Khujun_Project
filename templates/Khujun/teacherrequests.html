@@ -1,0 +1,37 @@
+{% extends 'Khujun/bases.html' %}
+{% block title %}Register{% endblock %}
+{% block register_active %}active{% endblock %}
+
+{% block body %}
+<div class="container">
+
+    <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-6 col-md-offset-3">
+        <br>
+            <div class="panel panel-default">
+                <div class="panel-body">
+                <br>
+                    <h3 style="text-align: center;color: blue">টিউশনের তথ্য</h3>
+                   <br>
+                    {% if error_message %}
+                        <p><strong>{{ error_message }}</strong></p>
+                    {% endif %}
+                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        {% include 'Khujun/teacherrequest_template.html' %}
+                        <br>
+                        <div class="form-group">
+                            <div class="col-sm-12">
+                                <button type="submit" class="btn btn-success center-block">সাবমিট</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}
+
