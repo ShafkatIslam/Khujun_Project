@@ -1,6 +1,10 @@
-{% extends 'Khujun/bases.html' %}
-{% block title %}Register{% endblock %}
-{% block register_active %}active{% endblock %}
+{% for profile in profiles %}
+    {% if profile.user == user %}
+        {% with profile.notifications as notification %}
+        {% include 'Khujun/bases.html'%}
+{% endwith %}
+    {% endif %}
+{% endfor %}
 {% load static %}
 {% block body %}
 <div class="container">
@@ -37,6 +41,7 @@
                                                 </div>
                                             </div>
                            </div>
+                           <br>
                             </form>
 
             </div>
@@ -46,7 +51,7 @@
             <div class="panel panel-default">
                 <div class="panel-body">
                 <br>
-                    <h3 style="text-align: center;color: blue">প্রোফাইল</h3>
+                    <h3 class="text-primary font-weight-bold text-center">প্রোফাইল</h3>
                    <br>
                  <div>
                      {% for message in messages %}

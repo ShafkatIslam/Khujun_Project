@@ -1,17 +1,52 @@
 {% extends 'Khujun/base_visitor.html' %}
-{% block title %}Log In{% endblock %}
+{% block title %}লগ-ইন{% endblock %}
 {% block login_active %}active{% endblock %}
 
 {% block body %}
 <div class="container">
-
+{% if user.is_authenticated %}
     <div class="row justify-content-md-center">
-        <div class="col-sm-12 col-md-6">
-            <div class="panel panel-default">
+        <div class="col-sm-12 col-md-6" style="background-color:white;margin-top:3%">
+            <div class="">
             <br>
-                <div class="form-control">
+                <div class="">
                 <br>
-                    <h3 class="text-center text-primary">লগ-ইন</h3>
+                    <h5 style="text-align: center;color: #ff914b">হ্যালো {{ user.username }}. <br>আপনি এখনও লগ-ইন অবস্থায় আছেন</h5>
+                <br>
+                    <form class="">
+                        <div class="form-group">
+                            <div class="col-auto">
+                                {% if teacher %}
+                                    <a class="btn btn-success btn-lg btn-block text-center" role="button" href="{% url 'Khujun:teacher_dashboard' %}"> চালিয়ে যেতে ক্লিক করুন </a>
+                                {% elif guardian %}
+                                   <a class="btn btn-success btn-lg btn-block text-center" role="button" href="{% url 'Khujun:guardian_dashboard' %}"> চালিয়ে যেতে ক্লিক করুন </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </form>
+                 <form role="form" method="post" action="{% url 'Khujun:logout_user' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                    <div class="col-auto">
+                    <button type="submit" class="btn-warning btn-lg btn-block">
+                        &nbsp; লগ-আউট
+                    </button>
+
+                </div>
+                </form>
+                </div>
+            <br>
+            <br>
+            </div>
+        </div>
+    </div>
+{% else %}
+      <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-6" style="background-color:white;margin-top:3%">
+            <div class="">
+            <br>
+                <div class="">
+                <br>
+                    <h3 class="text-primary font-weight-bold text-center">লগ-ইন</h3>
                 <br>
                 <div>
                      {% for message in messages %}
@@ -49,13 +84,18 @@
                         </div>
                     </form>
                 </div>
-                <div class="footer-copyright text-left py-3">
+                <div class="text-center py-3 bg-secondary text-white">
+                    Forget your password? <a class="text-danger" href="{% url 'password_reset' %}">Click here</a>
+                </div>
+                <br>
+                <div class="text-center py-3 bg-light">
                     Don't have an account? <a href="{% url 'Khujun:mainreg' %}">Click here</a> to register.
                 </div>
+                 <br>
             </div>
         </div>
     </div>
-
+{% endif %}
 </div>
 
 {% endblock %}

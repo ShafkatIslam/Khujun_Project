@@ -5,9 +5,12 @@
     <title>{% block title %}খুঁজুন{% endblock %}</title>
     {% load staticfiles %}
     <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{% static 'Khujun/style.css' %}"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
     <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     <script src="{% static 'Khujun/js/image.js' %}"></script>
@@ -31,16 +34,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="{% url 'Khujun:index' %}">খুঁজুন</a>
+            <a class="navbar-brand" href="{% url 'Khujun:teacher_dashboard' %}">খুঁজুন</a>
         </div>
 
         <!-- Items -->
         <div class="collapse navbar-collapse" id="topNavBar">
             <ul class="nav navbar-nav">
-                <li class="{% block albums_active %}{% endblock %}"><a href="{% url 'Khujun:index' %}"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>&nbsp; ড্যাশবোর্ড</a></li>
+                <li class="{% block albums_active %}{% endblock %}"><a href="{% url 'Khujun:teacher_dashboard' %}"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span>&nbsp; ড্যাশবোর্ড</a></li>
                 <li class="{% block profile_active %}{% endblock %}"><a href="{% url 'Khujun:teacher_profile_edit' %}"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp; ব্যবহারকারীর প্রোফাইল</a></li>
             </ul>
-            <form class="navbar-form navbar-left" role="search" method="get" action="{% url 'Khujun:index' %}">
+            <form class="navbar-form navbar-left" role="search" method="get" action="#">
                 <div class="form-group">
                     <input type="text" class="form-control" name="q" value="{{ request.GET.q }}">
                 </div>
@@ -48,16 +51,30 @@
             </form>
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a href="{% url 'Khujun:teacher_notification' %}">
-                        <span class="glyphicon glyphicon-bell" aria-hidden="true" style="font-size: 20px;color: #bd2130">{{ sections }}</span>&nbsp; নোটিফিকেশন
+                    <a style="font-size: 20px; font-family: 'Book Antiqua'" href="{% url 'Khujun:teacher_profile_edit' %}">
+                        {{ user.username }}
                     </a>
                 </li>
                 <li>
-                    <a href="{% url 'Khujun:logout_user' %}">
-                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; লগ-আউট
+                    <a href="{% url 'Khujun:teacher_notification' %}">
+                        {% if notification == 0 %}
+                            <span class="glyphicon glyphicon-bell" aria-hidden="true" style="font-size: 20px"></span>&nbsp; নোটিফিকেশন
+                        {% else %}
+                            <span class="glyphicon glyphicon-bell" aria-hidden="true" style="font-size: 20px;color: #bd2130">{{ notification }}</span>&nbsp; নোটিফিকেশন
+                        {% endif %}
                     </a>
                 </li>
+                <form class="navbar-form navbar-right" role="form" method="post" action="{% url 'Khujun:logout_user' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                    <div class="form-group">
+                    <button type="submit" class="btn btn-default">
+                        <span class="glyphicon glyphicon-off" aria-hidden="true"></span>&nbsp; লগ-আউট
+                    </button>
+
+                </div>
+            </form>
             </ul>
+
         </div>
 
     </div>

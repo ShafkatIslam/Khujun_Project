@@ -1,4 +1,10 @@
-{% extends 'Khujun/base.html' %}
+{% for profile in t_profiles %}
+    {% if profile.user == user %}
+        {% with profile.notifications as notification %}
+        {% include 'Khujun/base.html'%}
+{% endwith %}
+    {% endif %}
+{% endfor %}
 {% load static %}
 {% block body %}
 

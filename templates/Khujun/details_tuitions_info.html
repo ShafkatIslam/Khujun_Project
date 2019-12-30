@@ -1,4 +1,10 @@
-{% extends 'Khujun/bases.html' %}
+{% for profile in g_profiles %}
+    {% if profile.user == user %}
+        {% with profile.notifications as notification %}
+        {% include 'Khujun/bases.html'%}
+{% endwith %}
+    {% endif %}
+{% endfor %}
 {% load static %}
 {% block body %}
 
@@ -12,7 +18,7 @@
                     <br>
                     <div class="form-group">
                             <div class="col-sm-12">
-                                {% if profile.guardian_confirm == 0 %}
+                                {% if profile.guardian_confirm == 0 and profile.teacher_confirm == 1 %}
                                     <a href={% url 'Khujun:guardian_accept' profile.id %}><button class="btn btn-primary" style="float: right" >গ্রহণ করুন</button></a>
                                     <a href={% url 'Khujun:guardian_reject' profile.id %}><button class="btn btn-primary" style="float: left" >বর্জন করুন</button></a>
                                 {% else %}

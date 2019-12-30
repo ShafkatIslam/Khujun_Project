@@ -5,16 +5,25 @@
     <title>{% block title %}খুঁজুন{% endblock %}</title>
     {% load staticfiles %}
     <link rel="shortcut icon" type="image/png" href="{%  static 'favicon.ico' %}"/>
-    <link rel="stylesheet" href="{% static 'Khujun/bootstrap4/bootstrap.min.css' %}">
+    <!-- <link rel="stylesheet" href="{% static 'Khujun/bootstrap4/bootstrap.min.css' %}">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href='https://fonts.googleapis.com/css?family=Satisfy' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="{% static 'Khujun/style.css' %}"/>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+
    <!-- <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script> !-->
-    <script src="{% static 'Khujun/bootstrap4/bootstrap.min.js' %}"></script>
-    <script src="{% static 'Khujun/bootstrap4/popper.js' %}"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <!-- <script src="{% static 'Khujun/bootstrap4/bootstrap.min.js' %}"></script>-->
+    <!-- <script src="{% static 'Khujun/bootstrap4/popper.js' %}"></script>-->
     <script src="{% static 'Khujun/js/main.js' %}"></script>
 </head>
-<body>
+<body class="bg view">
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">খুঁজুন</a>
@@ -25,7 +34,7 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" href="#">হোম-পেইজ <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="{% url 'Khujun:home' %}">হোম-পেইজ <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
         <a class="nav-link" href="{% url 'Khujun:mainreg' %}">রেজিস্ট্রেশন</a>

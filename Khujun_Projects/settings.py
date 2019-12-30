@@ -43,7 +43,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'whitenoise.runserver_nostatic',
     'django.contrib.staticfiles',
+    'crispy_forms',
     'Khujun',
+    'django_starfield',
 ]
 
 MIDDLEWARE = [
@@ -86,7 +88,7 @@ DATABASES = {
         #'ENGINE': 'django.db.backends.sqlite3',
         #'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'tuition_db',
+        'NAME': 'Khujun',
         'USER': 'postgres',
         'PASSWORD': 'shafkaait',
         'HOST': '127.0.0.1',
@@ -137,8 +139,18 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+CRISPY_TEMPLATE_PACK = 'bootstrap4'
+
 AUTH_PROFILE_MODULE = "Khujun.TeacherProfile"
 AUTH_PROFILES_MODULE = "Khujun.GuardianProfile"
 AUTH_IMAGE_MODULE = "Khujun.TeacherImage"
+AUTH_RATING_MODULE = "Khujun.TeacherRating"
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = 'tuition.info.bd@gmail.com'
+EMAIL_HOST_PASSWORD = 'Tuitioninfo2019'
 
 django_heroku.settings(locals())

@@ -1,6 +1,10 @@
-{% extends 'Khujun/base.html' %}
-{% block title %}Register{% endblock %}
-{% block register_active %}active{% endblock %}
+{% for profile in profiles %}
+    {% if profile.user == user %}
+        {% with profile.notifications as notification %}
+        {% include 'Khujun/base.html'%}
+{% endwith %}
+    {% endif %}
+{% endfor %}
 {% load static %}
 {% block body %}
 <div class="container">
@@ -37,6 +41,7 @@
                                                 </div>
                                             </div>
                            </div>
+                           <br>
                             </form>
 
             </div>

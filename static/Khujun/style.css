@@ -64,4 +64,13 @@ custom_button:hover, a:hover {
   opacity: 0.7;
 }
 
+.heading {
+  font-size: 17px;
+  margin-right: 25px;
+  color: #6f42c1;
+}
+
+.checked {
+  color: orange;
+}
 

@@ -1,22 +1,22 @@
 {% extends 'Khujun/base_visitor.html' %}
-{% block title %}Register{% endblock %}
+{% block title %}রেজিস্ট্রেশন{% endblock %}
 {% block register_active %}active{% endblock %}
 
 {% block body %}
 <div class="container">
 
     <div class="row justify-content-md-center">
-        <div class="col-sm-12 col-md-6">
+        <div class="col-sm-12 col-md-6" style="background-color:white;margin-top:3%">
         <br>
-            <div class="panel panel-default">
-                <div class="form-control">
+            <div class="">
+                <div class="">
                 <br>
                     <h3 style="text-align: center;color: blue">রেজিস্ট্রেশন</h3>
                    <br>
                     {% if error_message %}
                         <p><strong>{{ error_message }}</strong></p>
                     {% endif %}
-                    <form class="form-horizontal" role="form" action="" method="post" enctype="multipart/form-data">
+                    <form class="" role="form" action="" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
                         {% include 'Khujun/form_template.html' %}
                         {% include 'Khujun/guardian_reg_template.html' %}

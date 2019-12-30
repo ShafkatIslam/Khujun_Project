@@ -1,35 +1,82 @@
 {% extends 'Khujun/base_visitor.html' %}
-{% block title %}Register{% endblock %}
+{% block title %}লগ-ইন{% endblock %}
 {% block register_active %}active{% endblock %}
 
 {% block body %}
 <div class="container">
-
+{% if user.is_authenticated %}
     <div class="row justify-content-md-center">
-        <div class="col-sm-12 col-md-6">
-            <div class="panel panel-default">
+        <div class="col-sm-12 col-md-6" style="background-color:white;margin-top:3%">
+            <div class="">
                 <br>
-                <div class="form-control">
-                    <h3 style="text-align: center;color: blue">লগ-ইন</h3>
+                <div class="text-primary font-weight-bold text-center">
+                <br>
+                    <h5 style="text-align: center;color: #ff914b">হ্যালো {{ user.username }}. <br>আপনি এখনও লগ-ইন অবস্থায় আছেন</h5>
                    <br>
-                    <form class="form-horizontal">
+                    <form class="">
+                       <div class="form-group">
+                            <div class="col-auto">
+                                {% if teacher %}
+                                    <a class="btn btn-success btn-lg btn-block" role="button" href="{% url 'Khujun:teacher_dashboard' %}"> চালিয়ে যেতে ক্লিক করুন </a>
+                                {% elif guardian %}
+                                    <a class="btn btn-success btn-lg btn-block" role="button" href="{% url 'Khujun:guardian_dashboard' %}"> চালিয়ে যেতে ক্লিক করুন </a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </form>
+                <form role="form" method="post" action="{% url 'Khujun:logout_user' %}" enctype="multipart/form-data">
+                {% csrf_token %}
+                    <div class="col-auto">
+                    <button type="submit" class="btn-warning btn-lg btn-block">
+                        &nbsp; লগ-আউট
+                    </button>
+
+                </div>
+                </form>
+                </div>
+                <br>
+                <br>
+            </div>
+        </div>
+    </div>
+{% else %}
+    <div class="row justify-content-md-center">
+        <div class="col-sm-12 col-md-6" style="background-color:white;margin-top:3%">
+            <div class="">
+                <br>
+                <div class="text-primary font-weight-bold text-center">
+                    <h3 >লগ-ইন</h3>
+                   <br>
+                      <div>
+                            {% for message in messages %}
+                                <h5 class="text-center text-success">
+                                    {{ message }}
+                                {{ break }}
+                                </h5>
+                            {% endfor %}
+                        </div>
+                    <form class="">
                         <div class="form-group">
                             <div class="col-auto">
-                                <button type="button" class="btn btn-success btn-lg btn-block"><a class="btn-success" href="{% url 'Khujun:login_user' %}"> শিক্ষক লগ-ইন </a> </button>
+                                 <a class="btn btn-success btn-lg btn-block" role="button" href="{% url 'Khujun:login_user' %}">শিক্ষক লগ-ইন</a>
+
                             </div>
                             <div class="col-auto" style="margin-top: 20px">
-                                <button type="button" class="btn btn-warning btn-lg btn-block"><a class="btn-warning" href="{% url 'Khujun:login_users' %}">অভিভাবক লগ-ইন</a> </button>
+                                <a class="btn btn-warning btn-lg btn-block" role="button" href="{% url 'Khujun:login_users' %}">অভিভাবক লগ-ইন</a>
+
                             </div>
                         </div>
                     </form>
                 </div>
+                <br>
                 <div class="panel-footer" style="text-align: center">
                      Don't have an account? <a href="{% url 'Khujun:mainreg' %}">Click here</a> to register.
                 </div>
+                <br>
             </div>
         </div>
     </div>
-
+{% endif %}
 </div>
 
 {% endblock %}

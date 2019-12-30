@@ -1,4 +1,10 @@
-{% extends 'Khujun/bases.html' %}
+{% for profile in profiles %}
+    {% if profile.user == user %}
+        {% with profile.notifications as notification %}
+        {% include 'Khujun/bases.html'%}
+{% endwith %}
+    {% endif %}
+{% endfor %}
 {% load static %}
 {% block body %}
 
@@ -18,6 +24,176 @@
 
                      </div>
 
+            <br>
+            <br>
+                    <div class="panel panel-default">
+                    <div class="panel body text-center">
+                    <br>
+                         <span class="heading">ব্যবহারের ওপর রেটিং: </span>
+
+                          {% if behaviour_rating == 1 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                          {% elif behaviour_rating == 2 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                          {% elif behaviour_rating == 3 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                          {% elif behaviour_rating == 4 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                         {% elif behaviour_rating == 5 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                          {% else %}
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                         {% endif %}
+
+                    </div>
+                    <div class="panel body text-center">
+                        <span class="heading">শিক্ষকতার ওপর রেটিং: </span>
+                         {% if teaching_rating == 1 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                          {% elif teaching_rating == 2 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                          {% elif teaching_rating == 3 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                          {% elif teaching_rating == 4 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                         {% elif teaching_rating == 5 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                          {% else %}
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                         {% endif %}
+                    </div>
+                    <div class="panel body text-center">
+                         <span class="heading">রেসপন্সের ওপর রেটিং: </span>
+                         {% if response_rating == 1 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                          {% elif response_rating == 2 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                          {% elif response_rating == 3 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                          {% elif response_rating == 4 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                         {% elif response_rating == 5 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                          {% else %}
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                         {% endif %}
+                    </div>
+                    <div class="panel body text-center">
+                         <span class="heading">প্রোফাইলের ওপর রেটিং: </span>
+                         {% if bio_rating == 1 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                          {% elif bio_rating == 2 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                          {% elif bio_rating == 3 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                          {% elif bio_rating == 4 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star"></span>
+                         {% elif bio_rating == 5 %}
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                             <span class="fa fa-star checked"></span>
+                          {% else %}
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                             <span class="fa fa-star"></span>
+                         {% endif %}
+                    </div>
+
+
+                    </div>
+
             </div>
         </div>
         <div class="col-sm-12 col-md-7">
@@ -28,6 +204,7 @@
                     <div class="form-group">
                             <div class="col-sm-12">
                                 <a href={% url 'Khujun:teacherrequests' profile.id %}><button class="btn btn-warning" style="float: right">অনুরোধ পাঠান</button></a>
+                                <a href={% url 'Khujun:teacherrating' profile.id %}><button class="btn btn-success" style="float: left">রেটিং দিন</button></a>
                             </div>
                         </div>
                 <br>

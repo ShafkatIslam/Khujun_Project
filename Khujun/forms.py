@@ -1,8 +1,9 @@
 from django import forms
 from django.contrib.auth.models import User
-from .models import TeacherRegistration,GuardianRegistration,TeacherProfile,GuardianProfile, TuitionInfo
-
+from .models import TeacherRegistration,GuardianRegistration,TeacherProfile,GuardianProfile, TuitionInfo, TeacherRating
+from django_starfield import Stars
 from .models import Album, Song
+from django.core.validators import MinLengthValidator
 
 
 class AlbumForm(forms.ModelForm):
@@ -113,9 +114,9 @@ class TeacherRegistrationForm(forms.ModelForm):
     ssc_board = forms.CharField(label='এস.এস.সি বোর্ড:', widget=forms.Select(choices=BOARDS,attrs={'class': 'form-control'}))
     first_name = forms.CharField(label='নামের প্রথম অংশ:', widget=forms.TextInput(attrs={'class': 'form-control'}))
     last_name = forms.CharField(label='নামের শেষ অংশ:', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    phone_number = forms.IntegerField(label='মোবাইল নম্বর:', widget=forms.NumberInput(attrs={'class': 'form-control'}))
-    ssc_roll = forms.IntegerField(label='এস.এস.সি রোল নম্বর:', widget=forms.NumberInput(attrs={'class': 'form-control'}))
-    ssc_reg = forms.IntegerField(label='এস.এস.সি রেজিস্ট্রেশন নম্বর:',widget=forms.NumberInput(attrs={'class': 'form-control'}))
+    phone_number = forms.CharField(min_length=11,max_length=11,label='মোবাইল নম্বর:',  widget=forms.NumberInput(attrs={'class': 'form-control'}))
+    ssc_roll = forms.CharField(min_length=6,max_length=6,label='এস.এস.সি রোল নম্বর:',widget=forms.NumberInput(attrs={'class': 'form-control'}))
+    ssc_reg = forms.CharField(min_length=10,max_length=10,label='এস.এস.সি রেজিস্ট্রেশন নম্বর:',widget=forms.NumberInput(attrs={'class': 'form-control'}))
 
     class Meta():
         model = TeacherRegistration
@@ -153,8 +154,8 @@ class TeacherRegistrationForm(forms.ModelForm):
 class GuardianRegistrationForm(forms.ModelForm):
     first_name = forms.CharField(label='নামের প্রথম অংশ:', widget=forms.TextInput(attrs={'class': 'form-control'}))
     last_name = forms.CharField(label='নামের শেষ অংশ:', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    phone_number = forms.IntegerField(label='মোবাইল নম্বর:', widget=forms.NumberInput(attrs={'class': 'form-control'}))
-    nid = forms.CharField(label='জাতীয় পরিচয়পত্র নম্বর:', widget=forms.NumberInput(attrs={'class': 'form-control'}))
+    phone_number = forms.CharField(min_length=11,max_length=11,label='মোবাইল নম্বর:', widget=forms.NumberInput(attrs={'class': 'form-control'}))
+    nid = forms.CharField(min_length=12,max_length=17,label='জাতীয় পরিচয়পত্র নম্বর:', widget=forms.NumberInput(attrs={'class': 'form-control'}))
 
     class Meta():
         model = GuardianRegistration
@@ -186,7 +187,7 @@ class TeacherProfileForm(forms.ModelForm):
     blood_group = forms.CharField(label='রক্তের গ্রূপ:',widget=forms.Select(choices=BLOOD, attrs={'class': 'form-control'}))
     address = forms.CharField(label='ঠিকানা:', widget=forms.TextInput(attrs={'class': 'form-control'}))
     city = forms.CharField(label='শহর:', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    nid = forms.CharField(label='জাতীয় পরিচয়-পত্র নম্বর/জন্ম-সনদ নম্বর:',widget=forms.NumberInput(attrs={'class': 'form-control'}))
+    nid = forms.CharField(min_length=12,max_length=17,label='জাতীয় পরিচয়-পত্র নম্বর/জন্ম-সনদ নম্বর:',widget=forms.NumberInput(attrs={'class': 'form-control'}))
     school = forms.CharField(label='বিদ্যালয়:',widget=forms.TextInput(attrs={'class': 'form-control'}))
     college = forms.CharField(label='কলেজ:',widget=forms.TextInput(attrs={'class': 'form-control'}))
     university = forms.CharField(label='বিশ্ববিদ্যালয়:',widget=forms.TextInput(attrs={'class': 'form-control'}))
@@ -207,7 +208,7 @@ class GuardianProfileForm(forms.ModelForm):
     blood_group = forms.CharField(label='রক্তের গ্রূপ:',widget=forms.Select(choices=BLOOD, attrs={'class': 'form-control'}))
     address = forms.CharField(label='ঠিকানা:', widget=forms.TextInput(attrs={'class': 'form-control'}))
     city = forms.CharField(label='শহর:', widget=forms.TextInput(attrs={'class': 'form-control'}))
-    nid = forms.CharField(label='জাতীয় পরিচয়-পত্র নম্বর/জন্ম-সনদ নম্বর:',widget=forms.NumberInput(attrs={'class': 'form-control'}))
+    nid = forms.CharField(min_length=12,max_length=17,label='জাতীয় পরিচয়-পত্র নম্বর/জন্ম-সনদ নম্বর:',widget=forms.NumberInput(attrs={'class': 'form-control'}))
 
 
     class Meta():
@@ -222,9 +223,20 @@ class TuitionInfoForm(forms.ModelForm):
     payment = forms.CharField(label='মাসিক বেতন:',widget=forms.Select(choices=PAYMENTS, attrs={'class': 'form-control'}))
     institute_name = forms.CharField(label='বিদ্যালয়/কলেজের নাম:', widget=forms.TextInput(attrs={'class': 'form-control'}))
     address = forms.CharField(label='ঠিকানা:', widget=forms.TextInput(attrs={'class': 'form-control'}))
+    #rating = forms.IntegerField(label='রেটিং দিন: ',widget=Stars)
 
     class Meta():
         model = TuitionInfo
         fields = ('classes', 'subject', 'day', 'payment', 'institute_name', 'address')
+
+class TeacherRatingForm(forms.ModelForm):
+    behaviour_rating = forms.IntegerField(label='ব্যবহারের ওপর রেটিং দিন ',widget=Stars)
+    teaching_rating = forms.IntegerField(label='পড়ানোর দক্ষতার ওপর রেটিং দিন ',widget=Stars)
+    response_rating = forms.IntegerField(label='টিউশন রেসপন্সের ওপর রেটিং দিন ',widget=Stars)
+    bio_rating = forms.IntegerField(label='প্রোফাইলের ওপর রেটিং দিন ',widget=Stars)
+
+    class Meta():
+        model = TeacherRating
+        fields = ('behaviour_rating', 'teaching_rating', 'response_rating', 'bio_rating')
 
 

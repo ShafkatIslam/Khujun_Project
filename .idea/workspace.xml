@@ -2,16 +2,37 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="937e4d53-37a0-4e7c-8b70-c4561ecc09ce" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Khujun/admin.py" beforeDir="false" afterPath="$PROJECT_DIR$/Khujun/admin.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Khujun/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/Khujun/forms.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Khujun/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/Khujun/models.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Khujun/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Khujun/urls.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Khujun/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/Khujun/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Khujun_Projects/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/Khujun_Projects/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Khujun_Projects/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/Khujun_Projects/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Pipfile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/Pipfile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/static/Khujun/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/Khujun/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Khujun/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/base_visitor.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/base_visitor.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/Khujun/bases.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/bases.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/details_tuition_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/details_tuition_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/details_tuitions_info.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/details_tuitions_info.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/guardian_dashboard.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/guardian_dashboard.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/guardian_notification.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/guardian_notification.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/guardian_profile_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/guardian_profile_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/logins.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/logins.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/main_login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/main_login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/main_register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/main_register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/registers.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/registers.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/teacher_notification.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/teacher_notification.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/teacher_profile_details.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/teacher_profile_details.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/teacher_profile_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/teacher_profile_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/teacherrequest_template.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/teacherrequest_template.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/Khujun/teacherrequests.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/Khujun/teacherrequests.html" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,61 +47,77 @@
     <session id="-1349422648">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="20" />
+          <entry key="project.closed" value="45" />
           <entry key="project.open.time.1" value="1" />
           <entry key="project.open.time.11" value="1" />
           <entry key="project.open.time.12" value="1" />
-          <entry key="project.open.time.2" value="2" />
-          <entry key="project.open.time.30" value="1" />
+          <entry key="project.open.time.2" value="3" />
+          <entry key="project.open.time.3" value="1" />
+          <entry key="project.open.time.30" value="2" />
           <entry key="project.open.time.31" value="2" />
           <entry key="project.open.time.33" value="1" />
           <entry key="project.open.time.34" value="1" />
-          <entry key="project.open.time.35" value="1" />
-          <entry key="project.open.time.36" value="1" />
-          <entry key="project.open.time.37" value="1" />
-          <entry key="project.open.time.38" value="1" />
-          <entry key="project.open.time.40" value="3" />
-          <entry key="project.open.time.43" value="1" />
-          <entry key="project.open.time.45" value="1" />
+          <entry key="project.open.time.35" value="3" />
+          <entry key="project.open.time.36" value="3" />
+          <entry key="project.open.time.37" value="2" />
+          <entry key="project.open.time.38" value="2" />
+          <entry key="project.open.time.39" value="1" />
+          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.40" value="4" />
+          <entry key="project.open.time.42" value="2" />
+          <entry key="project.open.time.43" value="2" />
+          <entry key="project.open.time.45" value="3" />
+          <entry key="project.open.time.47" value="2" />
+          <entry key="project.open.time.48" value="1" />
+          <entry key="project.open.time.49" value="1" />
           <entry key="project.open.time.50" value="1" />
-          <entry key="project.open.time.6" value="1" />
+          <entry key="project.open.time.53" value="1" />
+          <entry key="project.open.time.55" value="1" />
+          <entry key="project.open.time.6" value="2" />
           <entry key="project.open.time.67" value="1" />
-          <entry key="project.opened" value="22" />
+          <entry key="project.open.time.78" value="1" />
+          <entry key="project.opened" value="47" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="Procfile" value="3" />
-          <entry key="css" value="14" />
-          <entry key="html" value="201" />
+          <entry key="Procfile" value="4" />
+          <entry key="css" value="16" />
+          <entry key="html" value="438" />
           <entry key="jpg" value="2" />
-          <entry key="js" value="7" />
-          <entry key="py" value="117" />
-          <entry key="txt" value="1" />
+          <entry key="js" value="8" />
+          <entry key="md" value="1" />
+          <entry key="py" value="202" />
+          <entry key="txt" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="CSS" value="14" />
-          <entry key="HTML" value="201" />
+          <entry key="CSS" value="16" />
+          <entry key="HTML" value="438" />
           <entry key="Image" value="2" />
-          <entry key="JavaScript" value="7" />
-          <entry key="PLAIN_TEXT" value="4" />
-          <entry key="Python" value="117" />
+          <entry key="JavaScript" value="8" />
+          <entry key="Markdown" value="1" />
+          <entry key="PLAIN_TEXT" value="14" />
+          <entry key="Python" value="202" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="css" value="105" />
-          <entry key="html" value="3771" />
-          <entry key="py" value="4317" />
+          <entry key="css" value="137" />
+          <entry key="html" value="6061" />
+          <entry key="md" value="11" />
+          <entry key="py" value="7150" />
+          <entry key="txt" value="25" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="CSS" value="105" />
-          <entry key="HTML" value="3771" />
-          <entry key="Python" value="4317" />
+          <entry key="CSS" value="137" />
+          <entry key="HTML" value="6061" />
+          <entry key="Markdown" value="11" />
+          <entry key="PLAIN_TEXT" value="25" />
+          <entry key="Python" value="7150" />
         </counts>
       </usages-collector>
     </session>
@@ -88,36 +125,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Khujun/guardian_dashboard.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" selection-start-column="3" selection-end-column="10" />
-              <folding>
-                <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Khujun/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Khujun/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="390">
-              <caret line="223" column="83" selection-start-line="223" selection-start-column="83" selection-end-line="223" selection-end-column="83" />
+            <state relative-caret-position="1020">
+              <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
               </folding>
@@ -126,31 +137,70 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Khujun/models.py">
+        <entry file="file://$PROJECT_DIR$/templates/Khujun/main_login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="53" column="58" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
+            <state relative-caret-position="935">
+              <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Khujun_Projects/settings.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="97" selection-start-line="97" selection-end-line="97" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="51">
+                <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Khujun/urls.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="306">
+              <caret line="18" column="20" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="20" />
               <folding>
-                <element signature="e#0#55#0" expanded="true" />
+                <element signature="e#0#32#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/templates/Khujun/base.html">
+        <entry file="file://$PROJECT_DIR$/templates/Khujun/home.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="935">
-              <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
+            <state relative-caret-position="7310">
+              <caret line="430" selection-start-line="430" selection-end-line="430" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_profile_edit.html">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/templates/Khujun/login.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="10" selection-start-column="10" selection-end-column="10" />
+            <state relative-caret-position="1139">
+              <caret line="67" column="59" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="59" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Khujun/models.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2091">
+              <caret line="126" column="46" selection-start-line="126" selection-start-column="46" selection-end-line="126" selection-end-column="46" />
             </state>
           </provider>
         </entry>
@@ -169,6 +219,8 @@
     <findStrings>
       <find>music</find>
       <find>user</find>
+      <find>teacherrequest</find>
+      <find>images</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -177,24 +229,7 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/static/styles/style.css" />
-        <option value="$USER_HOME$/.virtualenvs/Khujun_Project-kEhrS8GA/Lib/site-packages/django/forms/models.py" />
-        <option value="$PROJECT_DIR$/templates/Khujun/teacher_registration.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/index.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/create_song.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/detail.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/songs.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/teacher_reg_template.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/form_template.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/register.html" />
-        <option value="$USER_HOME$/.virtualenvs/Khujun_Project-kEhrS8GA/Lib/site-packages/django/contrib/auth/models.py" />
-        <option value="$PROJECT_DIR$/templates/Khujun/registers.html" />
         <option value="$PROJECT_DIR$/templates/Khujun/guardian_reg_template.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/main_register.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/main_login.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/login.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/base_visitor.html" />
         <option value="$PROJECT_DIR$/templates/Khujun/create_album.html" />
         <option value="$PROJECT_DIR$/templates/Khujun/teacher_profile_edit_form.html" />
         <option value="$PROJECT_DIR$/templates/Khujun/image.html" />
@@ -203,29 +238,48 @@
         <option value="$PROJECT_DIR$/templates/Khujun/teacher_image_template.html" />
         <option value="$PROJECT_DIR$/templates/Khujun/teacher_profile_edits.html" />
         <option value="$PROJECT_DIR$/templates/Khujun/guardian_profile_edit_template.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/logins.html" />
         <option value="$PROJECT_DIR$/templates/Khujun/indexs.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/guardian_profile_edit.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/guardian_dashboard.html" />
         <option value="$PROJECT_DIR$/templates/Khujun/teacherrequest.html" />
-        <option value="$PROJECT_DIR$/Khujun/admin.py" />
-        <option value="$PROJECT_DIR$/templates/Khujun/teacher_profile_details.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/teacherrequests.html" />
         <option value="$PROJECT_DIR$/templates/Khujun/teacherrequest_template.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/teacherrating_template.py" />
+        <option value="$PROJECT_DIR$/templates/Khujun/teacherrating_template.html" />
+        <option value="$PROJECT_DIR$/static/Khujun/style.css" />
+        <option value="$PROJECT_DIR$/templates/Khujun/password_reset_subject.txt" />
+        <option value="$PROJECT_DIR$/templates/Khujun/password_reset_email.html" />
+        <option value="$PROJECT_DIR$/Khujun/forms.py" />
         <option value="$PROJECT_DIR$/Khujun_Projects/urls.py" />
         <option value="$PROJECT_DIR$/Khujun_Projects/settings.py" />
-        <option value="$PROJECT_DIR$/Khujun/forms.py" />
-        <option value="$PROJECT_DIR$/templates/Khujun/base.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/bases.html" />
-        <option value="$PROJECT_DIR$/Khujun/urls.py" />
-        <option value="$PROJECT_DIR$/Khujun/models.py" />
-        <option value="$PROJECT_DIR$/templates/Khujun/guardian_notification.html" />
-        <option value="$PROJECT_DIR$/static/Khujun/style.css" />
+        <option value="$PROJECT_DIR$/templates/Khujun/password_reset_done.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/password_reset_form.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/password_reset_confirm.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/password_reset_complete.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/teachers_profile_details.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/teacher_profile_details.html" />
         <option value="$PROJECT_DIR$/templates/Khujun/details_tuition_info.html" />
         <option value="$PROJECT_DIR$/templates/Khujun/details_tuitions_info.html" />
-        <option value="$PROJECT_DIR$/templates/Khujun/teacher_notification.html" />
-        <option value="$PROJECT_DIR$/Khujun/views.py" />
+        <option value="$PROJECT_DIR$/templates/Khujun/guardian_profile_edit.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/teacherrating.html" />
         <option value="$PROJECT_DIR$/templates/Khujun/teacher_profile_edit.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/teacherrequests.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/guardian_dashboard.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/base_visitor.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/bases.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/base.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/teacher_notification.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/guardian_notification.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/teacher_dashboard.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/register.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/registers.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/login.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/logins.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/main_register.html" />
+        <option value="$PROJECT_DIR$/Khujun/models.py" />
+        <option value="$PROJECT_DIR$/Khujun/admin.py" />
+        <option value="$PROJECT_DIR$/Khujun/urls.py" />
+        <option value="$PROJECT_DIR$/Khujun/views.py" />
+        <option value="$PROJECT_DIR$/templates/Khujun/main_login.html" />
+        <option value="$PROJECT_DIR$/templates/Khujun/home.html" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -235,10 +289,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
-    <option name="width" value="706" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="665" />
+    <option name="width" value="701" />
     <option name="height" value="735" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -272,12 +325,6 @@
             <path>
               <item name="Khujun_Project" type="b2602c69:ProjectViewProjectNode" />
               <item name="Khujun_Project" type="462c0819:PsiDirectoryNode" />
-              <item name="static" type="462c0819:PsiDirectoryNode" />
-              <item name="Khujun" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Khujun_Project" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Khujun_Project" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -285,6 +332,10 @@
               <item name="Khujun_Project" type="462c0819:PsiDirectoryNode" />
               <item name="templates" type="462c0819:PsiDirectoryNode" />
               <item name="Khujun" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Khujun_Project" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
           <select />
@@ -296,20 +347,20 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tuition_project" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Professt\Desktop\Demo\django\Khujun_Project\templates\Khujun" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Professt\Desktop\Demo\django\Khujun_Project\static" />
+      <recent name="C:\Users\Professt\Desktop\Demo\django\Khujun_Project\static\Khujun\Index" />
       <recent name="C:\Users\Professt\Desktop\Demo\django\Khujun_Project\static\Khujun\js" />
       <recent name="C:\Users\Professt\Desktop\Demo\django\Khujun_Project\static\Khujun\images" />
       <recent name="C:\Users\Professt\Desktop\Demo\django\Khujun_Project\static\Khujun" />
-      <recent name="C:\Users\Professt\Desktop\Demo\django\Khujun_Project\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Professt\Desktop\Demo\django\Khujun_Project\templates\Khujun" />
     </key>
   </component>
@@ -395,10 +446,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20196672" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14447807" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -429,329 +480,321 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/static/dashboard/assets/css/demo.css" />
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_profile.html" />
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/login.html">
+    <entry file="file://$USER_HOME$/.virtualenvs/Khujun_Project-kEhrS8GA/Lib/ntpath.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="21" column="22" lean-forward="true" selection-start-line="15" selection-start-column="15" selection-end-line="21" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/Khujun_Project-kEhrS8GA/Lib/site-packages/django/contrib/auth/models.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="356" column="6" selection-start-line="356" selection-start-column="6" selection-end-line="356" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/Khujun_Project-kEhrS8GA/Lib/site-packages/django/db/models/fields/files.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="59" column="8" selection-start-line="59" selection-start-column="8" selection-end-line="59" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/media/46516718_10210953526233010_3662758718598021120_n.jpg" />
-    <entry file="file://$PROJECT_DIR$/media/46516718_10210953526233010_3662758718598021120_n_M0thGOD.jpg" />
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/create_song.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_image_template.html" />
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_profile_edits.html" />
-    <entry file="file://$PROJECT_DIR$/static/Khujun/js/image.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="9" selection-start-column="9" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/guardian_profile_edit_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="37" selection-start-column="16" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/registers.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="64" selection-end-line="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1139">
-          <caret line="67" column="64" selection-start-line="67" selection-start-column="64" selection-end-line="67" selection-end-column="64" />
-          <folding>
-            <element signature="n#style#0;n#form#0;n#td#3;n#tr#0;n#tbody#0;n#table#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/main_register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" column="102" lean-forward="true" selection-start-line="17" selection-start-column="95" selection-end-line="17" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Khujun/admin.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="31" selection-start-line="9" selection-start-column="31" selection-end-line="9" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Khujun/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/form_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
+        <state relative-caret-position="-612" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Khujun/create_album.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="54" selection-start-line="18" selection-start-column="54" selection-end-line="18" selection-end-column="54" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/register.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="14" column="23" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/songs.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="126" selection-start-line="11" selection-start-column="126" selection-end-line="11" selection-end-column="126" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="30" selection-end-line="108" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Khujun_Projects/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Khujun_Projects/wsgi.py">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$USER_HOME$/.virtualenvs/Khujun_Project-kEhrS8GA/Lib/site-packages/django/forms/fields.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="194">
+          <caret line="208" column="8" selection-start-line="208" selection-start-column="8" selection-end-line="208" selection-end-column="8" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/password_reset_email.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="24" lean-forward="true" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/password_reset_subject.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="34" selection-start-column="34" selection-end-column="34" />
+          <caret column="6" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Khujun_Projects/settings.py">
+    <entry file="file://$USER_HOME$/.virtualenvs/Khujun_Project-kEhrS8GA/Lib/site-packages/django/core/validators.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="71" column="70" lean-forward="true" selection-start-line="71" selection-start-column="70" selection-end-line="71" selection-end-column="70" />
+        <state relative-caret-position="170">
+          <caret line="358" column="6" selection-start-line="358" selection-start-column="6" selection-end-line="358" selection-end-column="6" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/.virtualenvs/Khujun_Project-kEhrS8GA/Lib/site-packages/django/contrib/auth/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="86" column="4" selection-start-line="86" selection-start-column="4" selection-end-line="86" selection-end-column="4" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Khujun/migrations/0053_auto_20191023_1805.py" />
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_profile_edit_template.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/base_visitor.html">
+    <entry file="file://$USER_HOME$/.virtualenvs/Khujun_Project-kEhrS8GA/Lib/site-packages/django/db/models/fields/__init__.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="30" column="52" selection-start-line="30" selection-start-column="52" selection-end-line="30" selection-end-column="52" />
+        <state relative-caret-position="186">
+          <caret line="1830" column="39" lean-forward="true" selection-start-line="1830" selection-start-column="39" selection-end-line="1830" selection-end-column="39" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Khujun_Projects/urls.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="19" column="42" selection-start-line="19" selection-start-column="42" selection-end-line="19" selection-end-column="42" />
+        <state relative-caret-position="195">
+          <caret line="22" selection-start-line="22" selection-end-line="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Khujun_Projects/wsgi.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Khujun/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3502">
+          <caret line="211" selection-start-line="211" selection-end-line="211" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/password_reset_done.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="19" column="54" lean-forward="true" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/password_reset_complete.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/password_reset_confirm.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="4" column="84" selection-start-line="4" selection-start-column="40" selection-end-line="4" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/password_reset_form.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="10" column="26" selection-start-line="10" selection-start-column="26" selection-end-line="10" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacherrequest_template.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/teachers_profile_details.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/details_tuitions_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/guardian_profile_edit.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Khujun/guardian_reg_template.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/guardian_profile_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="19" selection-end-column="24" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/image.html">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_profile_details.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1003">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_profile_edit_template.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="12" selection-end-line="8" selection-end-column="12" />
+        <state>
+          <caret column="26" selection-start-column="26" selection-end-column="26" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_reg_template.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_profile_edit.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="8" selection-end-column="12" />
+        <state relative-caret-position="102">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacherrequest_template.html">
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacherrating.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="30" selection-start-column="16" selection-end-column="30" />
+        <state relative-caret-position="102">
+          <caret line="6" column="12" selection-start-line="6" selection-start-column="12" selection-end-line="6" selection-end-column="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Khujun/teacherrequests.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="20" column="44" selection-start-line="20" selection-start-column="44" selection-end-line="20" selection-end-column="44" />
+        <state relative-caret-position="136">
+          <caret line="8" column="23" selection-start-line="8" selection-start-column="23" selection-end-line="8" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/guardian_dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="39" selection-start-line="13" selection-start-column="39" selection-end-line="13" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/Khujun/Index/js/main.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="36" column="78" selection-start-line="36" selection-start-column="78" selection-end-line="36" selection-end-column="78" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_notification.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="83" selection-start-line="7" selection-start-column="21" selection-end-line="7" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/guardian_notification.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="7" column="83" selection-start-line="7" selection-start-column="83" selection-end-line="7" selection-end-column="83" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="19" selection-start-line="11" selection-start-column="19" selection-end-line="11" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/base_visitor.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="11" selection-start-line="4" selection-start-column="11" selection-end-line="4" selection-end-column="28" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Khujun/bases.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="50" column="57" lean-forward="true" selection-start-line="50" selection-start-column="57" selection-end-line="50" selection-end-column="57" />
+        <state relative-caret-position="169">
+          <caret line="35" column="79" selection-start-line="35" selection-start-column="79" selection-end-line="35" selection-end-column="79" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Khujun/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1581">
-          <caret line="108" column="23" selection-start-line="108" selection-start-column="23" selection-end-line="108" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#24#0" expanded="true" />
-            <marker date="1570788801351" expanded="true" signature="6772:6777" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/Khujun/style.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="441">
-          <caret line="66" lean-forward="true" selection-start-line="66" selection-end-line="66" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/details_tuition_info.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="55" lean-forward="true" selection-start-line="7" selection-start-column="30" selection-end-line="7" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/details_tuitions_info.html">
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/registers.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
-          <caret line="7" column="55" selection-start-line="7" selection-start-column="55" selection-end-line="7" selection-end-column="55" />
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/indexs.html">
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="24" selection-start-column="24" selection-end-column="24" />
+        <state relative-caret-position="17">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/templates/Khujun/logins.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="25" column="75" selection-start-line="25" selection-start-column="75" selection-end-line="25" selection-end-column="75" />
+        <state relative-caret-position="17">
+          <caret line="1" column="22" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Khujun/urls.py">
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/main_register.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="20" column="48" selection-start-line="20" selection-start-column="48" selection-end-line="20" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#32#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="17">
+          <caret line="1" column="29" selection-start-line="1" selection-start-column="29" selection-end-line="1" selection-end-column="29" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/details_tuition_info.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Khujun/admin.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="32" selection-start-line="11" selection-start-column="32" selection-end-line="11" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Khujun/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="390">
-          <caret line="223" column="83" selection-start-line="223" selection-start-column="83" selection-end-line="223" selection-end-column="83" />
+        <state relative-caret-position="1020">
+          <caret line="60" column="33" selection-start-line="60" selection-start-column="33" selection-end-line="60" selection-end-column="33" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_notification.html">
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/main_login.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="21" selection-start-column="21" selection-end-column="21" />
+        <state relative-caret-position="935">
+          <caret line="55" column="40" selection-start-line="55" selection-start-column="40" selection-end-line="55" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Khujun/urls.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="306">
+          <caret line="18" column="20" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="20" />
+          <folding>
+            <element signature="e#0#32#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/home.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="7310">
+          <caret line="430" selection-start-line="430" selection-end-line="430" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/templates/Khujun/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1139">
+          <caret line="67" column="59" selection-start-line="67" selection-start-column="56" selection-end-line="67" selection-end-column="59" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Khujun/models.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="53" column="58" selection-start-line="53" selection-start-column="58" selection-end-line="53" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#55#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="2091">
+          <caret line="126" column="46" selection-start-line="126" selection-start-column="46" selection-end-line="126" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/guardian_notification.html">
+    <entry file="file://$PROJECT_DIR$/Khujun_Projects/settings.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="41" column="44" lean-forward="true" selection-start-line="41" selection-start-column="44" selection-end-line="41" selection-end-column="44" />
+        <state relative-caret-position="119">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="935">
-          <caret line="55" column="51" selection-start-line="55" selection-start-column="51" selection-end-line="55" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/guardian_dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="3" selection-end-column="10" />
-          <folding>
-            <element signature="n#style#0;n#h4#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#p#1;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#!!top" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/templates/Khujun/teacher_profile_edit.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="10" selection-start-column="10" selection-end-column="10" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="51">
+            <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

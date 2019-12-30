@@ -1,14 +1,30 @@
-{% extends 'Khujun/bases.html' %}
+{% for profile in g_profiles %}
+    {% if profile.user == user %}
+        {% with profile.notifications as notification %}
+        {% include 'Khujun/bases.html'%}
+{% endwith %}
+    {% endif %}
+{% endfor %}
 {% load static %}
 {% block body %}
 <div class="container">
 
                 <div>
                      {% for message in messages %}
-                        <h4 class="text-center text-success">
-                            {{ message }}
-                        </h4>
-                    {% endfor %}
+                          {% if message == 'আপনার প্রোফাইল ছবিটি আপডেট হয়েছে' %}
+                              <h4 class="text-center text-success">
+                                {{ message }}
+                              </h4>
+                         {% elif message == 'আপনার অনুরোধটি পাঠানো হয়েছে' %}
+                              <h4 class="text-center text-success">
+                                {{ message }}
+                              </h4>
+                         {% else %}
+                              <h4 class="text-center text-danger">
+                                {{ message }}
+                              </h4>
+                         {% endif %}
+                     {% endfor %}
                 </div>
 
 <div class="container-fluid">
@@ -21,16 +37,16 @@
                          {% if profile.images %}
                               <img class="avatar border-gray" src="{{ profile.images }}" alt="{{ profile.username }}" id="blah" src="#" style="width:100%;height: 300px">
                         {% else %}
-                              <img class="avatar border-gray" src="{% static 'images/profile.jpg' %}" alt="..." id="blah" src="#" style="width:100%">
+                              <img class="avatar border-gray" src="{% static 'Khujun/images/profile.jpg' %}" alt="..." id="blah" src="#" style="width:100%">
                         {% endif %}
                         <h4 style="font-size: 15px;color: #ff0f2f;font-family: arial">{{ profile.first_name }} {{ profile.last_name }}</h4>
                         <p style="color: #00a5bd" class="custom_title">{{ profile.address }}</p>
                         <p style="font-size: 17px;color: #0c5460">{{ profile.university }}</p>
                         <p><a href={% url 'Khujun:teacherprofile' profile.id %}><button class="btn-success">বিস্তারিত</button></a></p>
-                    <br>
+                        <br>
 
                     </div>
-
+                        <br>
                     </div>
                     {% endfor %}
                 </div>
